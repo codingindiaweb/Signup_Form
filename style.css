@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+:root{
+    --background-color: #e0e5ec;
+    --font-color:#9baacf;
+    --box-shadow-p:rgba(195, 193, 198, 0.9);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: var(--background-color);
+    color: var(--font-color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size: 1.2rem;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+@media (max-width:600px){
+    body{
+        padding: 2rem .5rem;
+    }
+}
+
+.signup_card{
+    width: 100%;
+    max-width: 25rem;
+    background: var(--background-color);
+    box-shadow: .2rem .2rem .5rem var(--box-shadow-p) , -.2rem -.2rem .4rem #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1.2rem;
+    padding: 1rem;
+}
+
+.signup_title{
+    text-align: center;
+    background: #fff;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: .1rem .2rem .1rem rgba(0,0,0,.25);
+    overflow-x: hidden;
+    padding: 0.2rem 0rem;
+}
+
+.signup_card input{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: .7rem 1rem;
+    border-radius: 1.6rem;
+    border: none;
+    color: var(--font-color);
+    box-shadow: inset 0.2rem 0.2rem .4rem var(--box-shadow-p) , inset -.2rem -.2rem .5rem #fff;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: inherit;
+
+}
+
+.signup_card input::placeholder{
+    color: var(--font-color);
+    font-size: 1.1rem;
+}
+
+.signup_card input:focus{
+    outline: none;
+    box-shadow:  0.3rem 0.3rem .5rem var(--box-shadow-p) , -.2rem -.2rem .4rem #fff;
+}
+
+
+.signup_card button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: var(--background-color);
+    padding: 1rem 3rem;
+    box-shadow:  0.3rem 0.3rem .5rem var(--box-shadow-p) , -.2rem -.2rem .4rem #fff;
+    border-radius: 1.6rem;
+}
+
+.signup_card button:active{
+    box-shadow: inset 0.2rem 0.2rem .4rem var(--box-shadow-p) , inset -.2rem -.2rem .5rem #fff;
+    -webkit-tap-highlight-color: transparent;
+}
